@@ -44,6 +44,11 @@
 #include "opencv2/core/opengl.hpp"
 #include "opencv2/core/utils/logger.hpp"
 
+#ifndef HAVE_GTK
+#error "FAILED NOT COMPILED WITH GTK"
+#endif
+
+
 // in later times, use this file as a dispatcher to implementations like cvcap.cpp
 
 CV_IMPL void cvSetWindowProperty(const char* name, int prop_id, double prop_value)
